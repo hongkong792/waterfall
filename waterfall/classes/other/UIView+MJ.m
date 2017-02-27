@@ -8,6 +8,9 @@
 //
 
 #import "UIView+MJ.h"
+#import <objc/runtime.h>
+
+static void * _width = @"width";
 
 @implementation UIView (MJ)
 
@@ -21,6 +24,19 @@
 -  (CGFloat)height
 {
     return self.frame.size.height;
+}
+- (void)setWidth:(CGFloat)width
+{
+    CGRect frame = self.frame;
+    frame.size.width = width;
+    self.frame = frame;
+}
+
+
+- (CGFloat)width
+{
+    return self.frame.size.width;
+    
 }
 
 @end

@@ -8,10 +8,13 @@
 
 #import "ChoiceViewController.h"
 #import "MainTableViewCell.h"
+#import "HeaderScroll.h"
+#import "UIView+MJ.h"
 
 @interface ChoiceViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic,weak)UITableView *tableView;
 @property (nonatomic,strong)NSArray * dataArray;
+@property (nonatomic,weak)HeaderScroll * headerScroll;
 
 @end
 
@@ -44,6 +47,13 @@
 - (void)setHeaderView
 {
     
+    CGFloat scrollH = 250;
+    HeaderScroll * headerScroll = [[HeaderScroll alloc] initWithFrame:CGRectMake(0, 0, self.view.width, scrollH)];
+    UIView *view =  [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, scrollH)];
+    [view addSubview:headerScroll];
+    self.tableView.tableHeaderView = view;
+    self.headerScroll = headerScroll;
+    
     
 }
 
@@ -71,10 +81,6 @@
     return 20;
     
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    
-}
+
 
 @end

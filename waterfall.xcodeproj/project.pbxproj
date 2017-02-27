@@ -16,6 +16,7 @@
 		06019BF91E5DC1FD005AD7B9 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06019BF81E5DC1FD005AD7B9 /* MainTabbarController.m */; };
 		060581441E5F1D7400218270 /* UITabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 060581431E5F1D7400218270 /* UITabBarView.m */; };
 		060E8E521E63148A00555EB8 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060E8E511E63148A00555EB8 /* MainTableViewCell.m */; };
+		068EC6EC1E63DB60005D601E /* HeaderScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6EB1E63DB60005D601E /* HeaderScroll.m */; };
 		06FFA9E41E61583900695B62 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E31E61583900695B62 /* ChoiceViewController.m */; };
 		06FFA9E71E615B7500695B62 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E61E615B7500695B62 /* NavViewController.m */; };
 		06FFA9EA1E615E0700695B62 /* TabBarButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E91E615E0700695B62 /* TabBarButtton.m */; };
@@ -39,6 +40,8 @@
 		060581431E5F1D7400218270 /* UITabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarView.m; sourceTree = "<group>"; };
 		060E8E501E63148A00555EB8 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		060E8E511E63148A00555EB8 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
+		068EC6EA1E63DB60005D601E /* HeaderScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderScroll.h; sourceTree = "<group>"; };
+		068EC6EB1E63DB60005D601E /* HeaderScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderScroll.m; sourceTree = "<group>"; };
 		06FFA9E21E61583900695B62 /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
 		06FFA9E31E61583900695B62 /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
 		06FFA9E51E615B7500695B62 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
@@ -153,7 +156,7 @@
 		060E8E4B1E62C2CF00555EB8 /* choice */ = {
 			isa = PBXGroup;
 			children = (
-				060E8E531E6314A300555EB8 /* choiceScrollView */,
+				068EC6E91E63DB3F005D601E /* choiceScroll */,
 				060E8E4F1E63148A00555EB8 /* choiceCell */,
 			);
 			path = choice;
@@ -168,11 +171,13 @@
 			path = choiceCell;
 			sourceTree = "<group>";
 		};
-		060E8E531E6314A300555EB8 /* choiceScrollView */ = {
+		068EC6E91E63DB3F005D601E /* choiceScroll */ = {
 			isa = PBXGroup;
 			children = (
+				068EC6EA1E63DB60005D601E /* HeaderScroll.h */,
+				068EC6EB1E63DB60005D601E /* HeaderScroll.m */,
 			);
-			path = choiceScrollView;
+			path = choiceScroll;
 			sourceTree = "<group>";
 		};
 		06FFA9D91E61558D00695B62 /* home */ = {
@@ -307,6 +312,7 @@
 				060E8E521E63148A00555EB8 /* MainTableViewCell.m in Sources */,
 				06019BF91E5DC1FD005AD7B9 /* MainTabbarController.m in Sources */,
 				06019BDD1E5DC185005AD7B9 /* main.m in Sources */,
+				068EC6EC1E63DB60005D601E /* HeaderScroll.m in Sources */,
 				06FFA9EA1E615E0700695B62 /* TabBarButtton.m in Sources */,
 				06FFA9EF1E61C30700695B62 /* UIView+MJ.m in Sources */,
 				06FFA9E71E615B7500695B62 /* NavViewController.m in Sources */,

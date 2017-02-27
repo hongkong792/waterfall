@@ -10,6 +10,7 @@
 
 @interface UIView (MJ)
 @property(nonatomic,assign)CGFloat height;
+@property(nonatomic,assign)CGFloat width;
 
 
 @end
