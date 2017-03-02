@@ -58,6 +58,8 @@
 		060581441E5F1D7400218270 /* UITabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 060581431E5F1D7400218270 /* UITabBarView.m */; };
 		060E8E521E63148A00555EB8 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060E8E511E63148A00555EB8 /* MainTableViewCell.m */; };
 		068EC6EC1E63DB60005D601E /* HeaderScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6EB1E63DB60005D601E /* HeaderScroll.m */; };
+		068EC6F01E6801A1005D601E /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6EF1E6801A1005D601E /* HttpTool.m */; };
+		068EC6F31E6802D7005D601E /* HttpBaseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6F21E6802D7005D601E /* HttpBaseMethod.m */; };
 		06FFA9E41E61583900695B62 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E31E61583900695B62 /* ChoiceViewController.m */; };
 		06FFA9E71E615B7500695B62 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E61E615B7500695B62 /* NavViewController.m */; };
 		06FFA9EA1E615E0700695B62 /* TabBarButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E91E615E0700695B62 /* TabBarButtton.m */; };
@@ -167,6 +169,10 @@
 		060E8E511E63148A00555EB8 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		068EC6EA1E63DB60005D601E /* HeaderScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderScroll.h; sourceTree = "<group>"; };
 		068EC6EB1E63DB60005D601E /* HeaderScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderScroll.m; sourceTree = "<group>"; };
+		068EC6EE1E6801A1005D601E /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
+		068EC6EF1E6801A1005D601E /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
+		068EC6F11E6802D7005D601E /* HttpBaseMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBaseMethod.h; sourceTree = "<group>"; };
+		068EC6F21E6802D7005D601E /* HttpBaseMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBaseMethod.m; sourceTree = "<group>"; };
 		06FFA9E21E61583900695B62 /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
 		06FFA9E31E61583900695B62 /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
 		06FFA9E51E615B7500695B62 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
@@ -443,6 +449,17 @@
 			path = choiceScroll;
 			sourceTree = "<group>";
 		};
+		068EC6ED1E680189005D601E /* httpTool */ = {
+			isa = PBXGroup;
+			children = (
+				068EC6EE1E6801A1005D601E /* HttpTool.h */,
+				068EC6EF1E6801A1005D601E /* HttpTool.m */,
+				068EC6F11E6802D7005D601E /* HttpBaseMethod.h */,
+				068EC6F21E6802D7005D601E /* HttpBaseMethod.m */,
+			);
+			path = httpTool;
+			sourceTree = "<group>";
+		};
 		06FFA9D91E61558D00695B62 /* home */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,6 +500,7 @@
 		06FFA9EC1E61C2B300695B62 /* other */ = {
 			isa = PBXGroup;
 			children = (
+				068EC6ED1E680189005D601E /* httpTool */,
 				0600719A1E65C0DB0026E840 /* Lib */,
 				06FFA9ED1E61C30700695B62 /* UIView+MJ.h */,
 				06FFA9EE1E61C30700695B62 /* UIView+MJ.m */,
@@ -566,6 +584,7 @@
 			files = (
 				060072021E65C0DB0026E840 /* MJRefreshFooterView.m in Sources */,
 				060071EE1E65C0DB0026E840 /* AFHTTPRequestOperation.m in Sources */,
+				068EC6F01E6801A1005D601E /* HttpTool.m in Sources */,
 				06019BE31E5DC185005AD7B9 /* ViewController.m in Sources */,
 				0600720B1E65C0DB0026E840 /* SDWebImageManager.m in Sources */,
 				06FFA9E41E61583900695B62 /* ChoiceViewController.m in Sources */,
@@ -594,6 +613,7 @@
 				06019BDD1E5DC185005AD7B9 /* main.m in Sources */,
 				060072061E65C0DB0026E840 /* SDImageCache.m in Sources */,
 				060072001E65C0DB0026E840 /* MJRefreshBaseView.m in Sources */,
+				068EC6F31E6802D7005D601E /* HttpBaseMethod.m in Sources */,
 				060072011E65C0DB0026E840 /* MJRefreshConst.m in Sources */,
 				060072161E65C3150026E840 /* HeaderCollViewCell.m in Sources */,
 				060071FA1E65C0DB0026E840 /* MJType.m in Sources */,

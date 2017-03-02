@@ -16,6 +16,7 @@
 
 
 #import "MJExtension.h"
+#import "MJRefresh.h"
 #endif /* PrefixHeader_pch */
 
 

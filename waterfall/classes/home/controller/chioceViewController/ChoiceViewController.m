@@ -11,10 +11,13 @@
 #import "HeaderScroll.h"
 #import "UIView+MJ.h"
 
-@interface ChoiceViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ChoiceViewController ()<UITableViewDelegate, UITableViewDataSource,MJRefreshBaseViewDelegate>
 @property (nonatomic,weak)UITableView *tableView;
 @property (nonatomic,strong)NSArray * dataArray;
 @property (nonatomic,weak)HeaderScroll * headerScroll;
+@property (nonatomic,weak)MJRefreshHeaderView *headerView;
+@property (nonatomic,weak)MJRefreshFooterView *footerView;
+
 
 @end
 
@@ -28,6 +31,8 @@
     [self setHeaderView];
     
     //自动刷新
+
+    
     
     
 }
@@ -61,15 +66,43 @@
 #pragma 自动刷新
 - (void)setupRefresh
 {
+    MJRefreshHeaderView * header = [MJRefreshHeaderView header];
+    header.scrollView = self.tableView;
+    header.delegate = self;
+    [header beginRefreshing];
+    self.headerView = header;
+                                    
+    MJRefreshFooterView *footer =  [MJRefreshFooterView footer];
+    footer.delegate = self;
+    footer.scrollView = self.tableView;
+    
+}
+// 开始进入刷新状态就会调用
+- (void)refreshViewBeginRefreshing:(MJRefreshBaseView *)refreshView
+{
+    if ([refreshView isKindOfClass:[MJRefreshHeaderView class]]) {
+        [self sendRequest];
+        
+    }
+    
     
     
     
 }
 
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma 加载新数据
+- (void)sendRequest
+{
+    
+    
+}
+
 #pragma UITableViewDelegate UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -81,6 +114,9 @@
     return 20;
     
 }
+
+
+
 
 
 @end

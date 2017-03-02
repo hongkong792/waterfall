@@ -61,8 +61,17 @@
 
 - (void)nextPAge
 {
-    
-    
+    //滚到next indexpath
+    NSIndexPath *currentPath =  [[self.colletionView indexPathsForVisibleItems] lastObject];
+    NSInteger item = currentPath.item;
+    NSInteger section = currentPath.section;
+    if (item == self.arr.count) {
+        item = 0;
+        section++;
+    }
+    section = section%MaxCount;
+    NSIndexPath* nextIndexPath = [NSIndexPath indexPathForItem:item inSection:section];
+    [self.colletionView scrollToItemAtIndexPath:nextIndexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 }
 
 #pragma 添加分页控制器
@@ -88,8 +97,6 @@
     NSArray *plist = [HGScrollModel objectArrayWithFile:@"newses.plist"];
     [self.arr addObjectsFromArray:plist];
     
-    
-    
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     flow.minimumLineSpacing = 0;
     flow.scrollDirection = UICollectionViewScrollDirectionHorizontal;
@@ -101,7 +108,6 @@
     collectionView.pagingEnabled = YES;
     [self addSubview:collectionView];
     self.colletionView = collectionView;
-    
 }
 
 
