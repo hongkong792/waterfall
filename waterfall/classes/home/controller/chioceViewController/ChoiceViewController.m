@@ -13,6 +13,8 @@
 #import "HttpTool.h"
 #import "HGCategoryModel.h"
 #import "HGCategoryList.h"
+#import "HGGoodsModel.h"
+#import "HGGoodsFrame.h"
 
 @interface ChoiceViewController ()<UITableViewDelegate, UITableViewDataSource,MJRefreshBaseViewDelegate>
 @property (nonatomic,weak)UITableView *tableView;
@@ -21,6 +23,8 @@
 @property (nonatomic,weak)MJRefreshHeaderView *headerView;
 @property (nonatomic,weak)MJRefreshFooterView *footerView;
 @property (nonatomic,weak) HGCategoryList *cateList;
+//存放frame模型的数组
+@property (nonatomic,strong) NSMutableArray *arrFrames;
 
 
 @end
@@ -37,7 +41,14 @@
     //自动刷
     [self setupRefresh];
     
-    
+}
+
+- (NSMutableArray *)arrFrames
+{
+    if (!_arrFrames) {
+        _arrFrames = [[NSMutableArray alloc] init];
+    }
+    return _arrFrames;
     
 }
 
@@ -112,16 +123,32 @@
         //1.获得数据的分类
         NSArray *categary = json[@"data"][@"category_list"];
         NSArray *cateModels = [HGCategoryModel objectArrayWithKeyValuesArray:categary];
-        
+        self.cateList.data = cateModels;
         //获得商品的展示的数据 good_list
         NSArray *tempGoods = json[@"data"][@"goods_list"];
-        NSArray *goodsArray =
+        NSArray *goodsArray = [HGGoodsModel objectArrayWithKeyValuesArray:tempGoods];
         
+        //遍历商品类型
+        for(HGGoodsModel *goodsModel in goodsArray) {
+            HGGoodsFrame *goodsFrame=[[HGGoodsFrame alloc]init];
+            
+            goodsFrame.goodsModel=goodsModel;  //传递模型
+            
+            //把frame模型添加到数组
+            [arrarFrames addObject:goodsFrame];
+            
+        }
         
+        //把新获得的数组放在前面
+        NSMutableArray *tempArray=[NSMutableArray array];
+        [tempArray addObjectsFromArray:arrarFrames]; //添加新的数组
+        [tempArray addObjectsFromArray:self.arrFrames];
+        self.arrFrames=tempArray; //在真个传递给主数组
         
-        
-        
-        
+        //刷新表示图
+        [self.tableView reloadData];
+        //停止刷新
+        [self.headerView endRefreshing];
         
     } failure:^(id object) {
         
