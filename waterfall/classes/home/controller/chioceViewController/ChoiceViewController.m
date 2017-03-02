@@ -10,6 +10,9 @@
 #import "MainTableViewCell.h"
 #import "HeaderScroll.h"
 #import "UIView+MJ.h"
+#import "HttpTool.h"
+#import "HGCategoryModel.h"
+#import "HGCategoryList.h"
 
 @interface ChoiceViewController ()<UITableViewDelegate, UITableViewDataSource,MJRefreshBaseViewDelegate>
 @property (nonatomic,weak)UITableView *tableView;
@@ -17,6 +20,7 @@
 @property (nonatomic,weak)HeaderScroll * headerScroll;
 @property (nonatomic,weak)MJRefreshHeaderView *headerView;
 @property (nonatomic,weak)MJRefreshFooterView *footerView;
+@property (nonatomic,weak) HGCategoryList *cateList;
 
 
 @end
@@ -30,8 +34,8 @@
     //设置headerview
     [self setHeaderView];
     
-    //自动刷新
-
+    //自动刷
+    [self setupRefresh];
     
     
     
@@ -83,6 +87,9 @@
     if ([refreshView isKindOfClass:[MJRefreshHeaderView class]]) {
         [self sendRequest];
         
+    }else{
+        
+        
     }
     
     
@@ -99,6 +106,28 @@
 #pragma 加载新数据
 - (void)sendRequest
 {
+    [HttpTool dataWithUrl:HGURL prams:nil success:^(id json) {
+        
+        NSMutableArray *arrarFrames = [NSMutableArray array];
+        //1.获得数据的分类
+        NSArray *categary = json[@"data"][@"category_list"];
+        NSArray *cateModels = [HGCategoryModel objectArrayWithKeyValuesArray:categary];
+        
+        //获得商品的展示的数据 good_list
+        NSArray *tempGoods = json[@"data"][@"goods_list"];
+        NSArray *goodsArray =
+        
+        
+        
+        
+        
+        
+        
+    } failure:^(id object) {
+        
+    }];
+    
+    
     
     
 }

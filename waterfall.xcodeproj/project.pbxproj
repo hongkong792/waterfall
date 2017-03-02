@@ -56,6 +56,9 @@
 		06019BEB1E5DC185005AD7B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06019BE91E5DC185005AD7B9 /* LaunchScreen.storyboard */; };
 		06019BF91E5DC1FD005AD7B9 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06019BF81E5DC1FD005AD7B9 /* MainTabbarController.m */; };
 		060581441E5F1D7400218270 /* UITabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 060581431E5F1D7400218270 /* UITabBarView.m */; };
+		06079D711E685C53006F4FA1 /* HGCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06079D701E685C53006F4FA1 /* HGCategoryModel.m */; };
+		06079D741E685CC2006F4FA1 /* HGImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 06079D731E685CC2006F4FA1 /* HGImageModel.m */; };
+		06079D771E686102006F4FA1 /* HGCategoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 06079D761E686102006F4FA1 /* HGCategoryList.m */; };
 		060E8E521E63148A00555EB8 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 060E8E511E63148A00555EB8 /* MainTableViewCell.m */; };
 		068EC6EC1E63DB60005D601E /* HeaderScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6EB1E63DB60005D601E /* HeaderScroll.m */; };
 		068EC6F01E6801A1005D601E /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6EF1E6801A1005D601E /* HttpTool.m */; };
@@ -165,6 +168,12 @@
 		06019BF81E5DC1FD005AD7B9 /* MainTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarController.m; sourceTree = "<group>"; };
 		060581421E5F1D7400218270 /* UITabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITabBarView.h; sourceTree = "<group>"; };
 		060581431E5F1D7400218270 /* UITabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITabBarView.m; sourceTree = "<group>"; };
+		06079D6F1E685C53006F4FA1 /* HGCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCategoryModel.h; sourceTree = "<group>"; };
+		06079D701E685C53006F4FA1 /* HGCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCategoryModel.m; sourceTree = "<group>"; };
+		06079D721E685CC2006F4FA1 /* HGImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGImageModel.h; sourceTree = "<group>"; };
+		06079D731E685CC2006F4FA1 /* HGImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGImageModel.m; sourceTree = "<group>"; };
+		06079D751E686102006F4FA1 /* HGCategoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCategoryList.h; sourceTree = "<group>"; };
+		06079D761E686102006F4FA1 /* HGCategoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCategoryList.m; sourceTree = "<group>"; };
 		060E8E501E63148A00555EB8 /* MainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
 		060E8E511E63148A00555EB8 /* MainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		068EC6EA1E63DB60005D601E /* HeaderScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderScroll.h; sourceTree = "<group>"; };
@@ -215,6 +224,10 @@
 			children = (
 				060071971E65C01E0026E840 /* HGScrollModel.h */,
 				060071981E65C01E0026E840 /* HGScrollModel.m */,
+				06079D6F1E685C53006F4FA1 /* HGCategoryModel.h */,
+				06079D701E685C53006F4FA1 /* HGCategoryModel.m */,
+				06079D721E685CC2006F4FA1 /* HGImageModel.h */,
+				06079D731E685CC2006F4FA1 /* HGImageModel.m */,
 			);
 			path = choiceModel;
 			sourceTree = "<group>";
@@ -445,6 +458,8 @@
 				068EC6EB1E63DB60005D601E /* HeaderScroll.m */,
 				060072141E65C3150026E840 /* HeaderCollViewCell.h */,
 				060072151E65C3150026E840 /* HeaderCollViewCell.m */,
+				06079D751E686102006F4FA1 /* HGCategoryList.h */,
+				06079D761E686102006F4FA1 /* HGCategoryList.m */,
 			);
 			path = choiceScroll;
 			sourceTree = "<group>";
@@ -598,6 +613,7 @@
 				06019BE01E5DC185005AD7B9 /* AppDelegate.m in Sources */,
 				060071F11E65C0DB0026E840 /* AFNetworkReachabilityManager.m in Sources */,
 				060071F81E65C0DB0026E840 /* MJFoundation.m in Sources */,
+				06079D771E686102006F4FA1 /* HGCategoryList.m in Sources */,
 				060E8E521E63148A00555EB8 /* MainTableViewCell.m in Sources */,
 				060072111E65C0DB0026E840 /* UIImageView+HighlightedWebCache.m in Sources */,
 				060072081E65C0DB0026E840 /* SDWebImageDecoder.m in Sources */,
@@ -625,6 +641,7 @@
 				060072051E65C0DB0026E840 /* NSData+ImageContentType.m in Sources */,
 				06FFA9EA1E615E0700695B62 /* TabBarButtton.m in Sources */,
 				060071FB1E65C0DB0026E840 /* NSObject+MJCoding.m in Sources */,
+				06079D711E685C53006F4FA1 /* HGCategoryModel.m in Sources */,
 				060071F91E65C0DB0026E840 /* MJProperty.m in Sources */,
 				0600720D1E65C0DB0026E840 /* UIButton+WebCache.m in Sources */,
 				060071FD1E65C0DB0026E840 /* NSObject+MJProperty.m in Sources */,
@@ -633,6 +650,7 @@
 				060072131E65C0DB0026E840 /* UIView+WebCacheOperation.m in Sources */,
 				060072041E65C0DB0026E840 /* MKAnnotationView+WebCache.m in Sources */,
 				06FFA9EF1E61C30700695B62 /* UIView+MJ.m in Sources */,
+				06079D741E685CC2006F4FA1 /* HGImageModel.m in Sources */,
 				06FFA9E71E615B7500695B62 /* NavViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
