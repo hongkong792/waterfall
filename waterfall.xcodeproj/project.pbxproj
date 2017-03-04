@@ -69,6 +69,9 @@
 		068EC6EC1E63DB60005D601E /* HeaderScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6EB1E63DB60005D601E /* HeaderScroll.m */; };
 		068EC6F01E6801A1005D601E /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6EF1E6801A1005D601E /* HttpTool.m */; };
 		068EC6F31E6802D7005D601E /* HttpBaseMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 068EC6F21E6802D7005D601E /* HttpBaseMethod.m */; };
+		06C6D1541E6B03340001CED1 /* HGCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C6D1531E6B03340001CED1 /* HGCategoryCell.m */; };
+		06C6D1591E6B05CE0001CED1 /* UIBarButtonItem+CH.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C6D1561E6B05CE0001CED1 /* UIBarButtonItem+CH.m */; };
+		06C6D15A1E6B05CE0001CED1 /* UIImage+CH.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C6D1581E6B05CE0001CED1 /* UIImage+CH.m */; };
 		06FFA9E41E61583900695B62 /* ChoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E31E61583900695B62 /* ChoiceViewController.m */; };
 		06FFA9E71E615B7500695B62 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E61E615B7500695B62 /* NavViewController.m */; };
 		06FFA9EA1E615E0700695B62 /* TabBarButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 06FFA9E91E615E0700695B62 /* TabBarButtton.m */; };
@@ -200,6 +203,12 @@
 		068EC6EF1E6801A1005D601E /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		068EC6F11E6802D7005D601E /* HttpBaseMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBaseMethod.h; sourceTree = "<group>"; };
 		068EC6F21E6802D7005D601E /* HttpBaseMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBaseMethod.m; sourceTree = "<group>"; };
+		06C6D1521E6B03340001CED1 /* HGCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGCategoryCell.h; sourceTree = "<group>"; };
+		06C6D1531E6B03340001CED1 /* HGCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGCategoryCell.m; sourceTree = "<group>"; };
+		06C6D1551E6B05CE0001CED1 /* UIBarButtonItem+CH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+CH.h"; path = "Lib/UIBarButtonItem+CH.h"; sourceTree = "<group>"; };
+		06C6D1561E6B05CE0001CED1 /* UIBarButtonItem+CH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIBarButtonItem+CH.m"; path = "Lib/UIBarButtonItem+CH.m"; sourceTree = "<group>"; };
+		06C6D1571E6B05CE0001CED1 /* UIImage+CH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+CH.h"; path = "Lib/UIImage+CH.h"; sourceTree = "<group>"; };
+		06C6D1581E6B05CE0001CED1 /* UIImage+CH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CH.m"; path = "Lib/UIImage+CH.m"; sourceTree = "<group>"; };
 		06FFA9E21E61583900695B62 /* ChoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoiceViewController.h; sourceTree = "<group>"; };
 		06FFA9E31E61583900695B62 /* ChoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoiceViewController.m; sourceTree = "<group>"; };
 		06FFA9E51E615B7500695B62 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
@@ -241,6 +250,8 @@
 		060071961E65C01E0026E840 /* choiceModel */ = {
 			isa = PBXGroup;
 			children = (
+				06C6D1521E6B03340001CED1 /* HGCategoryCell.h */,
+				06C6D1531E6B03340001CED1 /* HGCategoryCell.m */,
 				06079D891E686565006F4FA1 /* HGCategoryList.h */,
 				06079D8A1E686565006F4FA1 /* HGCategoryList.m */,
 				060071971E65C01E0026E840 /* HGScrollModel.h */,
@@ -553,6 +564,10 @@
 		06FFA9EC1E61C2B300695B62 /* other */ = {
 			isa = PBXGroup;
 			children = (
+				06C6D1551E6B05CE0001CED1 /* UIBarButtonItem+CH.h */,
+				06C6D1561E6B05CE0001CED1 /* UIBarButtonItem+CH.m */,
+				06C6D1571E6B05CE0001CED1 /* UIImage+CH.h */,
+				06C6D1581E6B05CE0001CED1 /* UIImage+CH.m */,
 				068EC6ED1E680189005D601E /* httpTool */,
 				0600719A1E65C0DB0026E840 /* Lib */,
 				06FFA9ED1E61C30700695B62 /* UIView+MJ.h */,
@@ -651,6 +666,7 @@
 				060072101E65C0DB0026E840 /* UIImage+WebP.m in Sources */,
 				06019BE01E5DC185005AD7B9 /* AppDelegate.m in Sources */,
 				060071F11E65C0DB0026E840 /* AFNetworkReachabilityManager.m in Sources */,
+				06C6D1541E6B03340001CED1 /* HGCategoryCell.m in Sources */,
 				06079D8B1E686565006F4FA1 /* HGCategoryList.m in Sources */,
 				060071F81E65C0DB0026E840 /* MJFoundation.m in Sources */,
 				06079D771E686102006F4FA1 /* HGCategoryList.m in Sources */,
@@ -664,6 +680,7 @@
 				060071FC1E65C0DB0026E840 /* NSObject+MJKeyValue.m in Sources */,
 				060071991E65C01E0026E840 /* HGScrollModel.m in Sources */,
 				060071F41E65C0DB0026E840 /* AFURLRequestSerialization.m in Sources */,
+				06C6D15A1E6B05CE0001CED1 /* UIImage+CH.m in Sources */,
 				060071FE1E65C0DB0026E840 /* NSString+MJExtension.m in Sources */,
 				0600720E1E65C0DB0026E840 /* UIImage+GIF.m in Sources */,
 				060072121E65C0DB0026E840 /* UIImageView+WebCache.m in Sources */,
@@ -674,6 +691,7 @@
 				068EC6F31E6802D7005D601E /* HttpBaseMethod.m in Sources */,
 				060072011E65C0DB0026E840 /* MJRefreshConst.m in Sources */,
 				060072161E65C3150026E840 /* HeaderCollViewCell.m in Sources */,
+				06C6D1591E6B05CE0001CED1 /* UIBarButtonItem+CH.m in Sources */,
 				060071FA1E65C0DB0026E840 /* MJType.m in Sources */,
 				060071F51E65C0DB0026E840 /* AFURLResponseSerialization.m in Sources */,
 				06079D851E6864D1006F4FA1 /* HGGoodsImageModel.m in Sources */,

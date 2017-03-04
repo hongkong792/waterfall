@@ -172,6 +172,16 @@
 }
 
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HGChoiceCell *cell=[HGChoiceCell cellWithTableView:tableView indentifier:HGChoiceName];
+    HGGoodsFrame *goodsFrame=self.arrFrames[indexPath.row];
+    cell.goodsFrame=goodsFrame;
+    
+    return cell;
+    
+}
+
 
 
 

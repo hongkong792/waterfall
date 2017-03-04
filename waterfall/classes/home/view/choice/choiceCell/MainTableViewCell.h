@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MainTableViewCell : UITableViewCell
++(instancetype)cellWithTableView:(UITableView *)tableView indentifier:(NSString *)indentifier;
 
+@property (nonatomic,strong) HGGoodsFrame *goodsFrame;
 @end
